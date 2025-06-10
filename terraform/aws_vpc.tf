@@ -26,7 +26,7 @@ module "vpc" {
   single_nat_gateway     = true
   one_nat_gateway_per_az = false
   reuse_nat_ips          = true                    # <= Skip creation of EIPs for the NAT Gateways
-  external_nat_ip_ids    = aws_eip.nat.*.id        # <= IPs specified here as input to the module
+  external_nat_ip_ids    = [aws_eip.nat[0].id]        # <= IPs specified here as input to the module
 
   tags = {
     Terraform = "true"
