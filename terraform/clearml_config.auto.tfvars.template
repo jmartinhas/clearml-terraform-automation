@@ -1,0 +1,34 @@
+###############################################################
+# ClearML Terraform Configuration Variables Template
+#
+# This template provides example values for variables required
+# to deploy ClearML infrastructure using Terraform. Copy and
+# rename this file to clearml_config.auto.tfvars and update the
+# values as needed for your environment.
+#
+# Variables include:
+# - AWS region and tfstate S3 bucket
+# - SSH and key pair settings
+# - Domain name for ClearML server
+# - AMI and instance type
+# - User credentials file and other server settings
+###############################################################
+
+# region
+aws_region      = "<aws_region>" # e.g. us-east-1, eu-west-1, etc.
+tfstate_bucket  = "<tfstate_bucket_name>" # bucket for storing tfstate files
+
+# enable ssh
+ssh_port22      = false  # by default use SSM session manager
+key_name        = "<priv_key_name>"
+
+# domain
+domain_name     = "<domain_name>" # e.g. clearml.example.com
+
+# ClearML server settings
+ami_id          = var.region_map[aws_region] 
+# instance_type   = "t3a.large" # default
+
+# apiserver.conf settings
+# enable_hash_password = true #default
+user_creds_file = "user_credentials.yaml.gitignore" # file with user credentials, see example above
