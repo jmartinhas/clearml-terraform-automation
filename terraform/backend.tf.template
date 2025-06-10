@@ -1,0 +1,35 @@
+###############################################################
+# Terraform Backend Configuration Template
+#
+# This file configures the remote backend for storing Terraform
+# state files in an S3 bucket. Update the placeholders below:
+#   - <s3 bucket name for tfstate files>: Name of your S3 bucket
+#   - <aws_region>: AWS region (e.g., us-east-1, eu-west-1)
+#
+# The backend ensures state consistency and enables team
+# collaboration. Optionally, uncomment 'dynamodb_table' for
+# state locking to prevent concurrent modifications.
+#
+# Required Terraform and provider versions are specified.
+###############################################################
+
+terraform {
+  backend "s3" {
+    bucket         = "<s3 bucket name for tfstate files>"
+    region         = "<aws_region>" 
+    key            = "terraform/CLEARML/server/terraform.tfstate"
+    # dynamodb_table = "Lock-Files"
+    encrypt        = true
+  }
+  required_version = ">=0.13.0"
+  required_providers {
+    aws = {
+      version = ">= 5.0"
+      source  = "hashicorp/aws"
+    }
+    null = {
+      version = ">= 3.2"
+      source  = "hashicorp/null"
+    }
+  }
+}
