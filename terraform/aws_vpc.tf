@@ -1,3 +1,16 @@
+###############################################################
+# AWS VPC Module for ClearML Deployment
+#
+# Provisions a Virtual Private Cloud (VPC) using the
+# terraform-aws-modules/vpc/aws module. This setup includes:
+#   - One public and one private subnet in eu-west-1a
+#   - NAT Gateway with Elastic IP for outbound internet from private subnet
+#   - Tags for Terraform and environment tracking
+#
+# The Elastic IP for the NAT Gateway is created separately and
+# passed to the module to allow for IP reuse and management.
+###############################################################
+
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.21.0"
