@@ -81,31 +81,8 @@ Follow the [Quickstart Guide](./terraform/QUICKSTART.MD) for step-by-step deploy
 
 For more on Terraform usage, see the [Terraform Documentation](https://www.terraform.io/docs/index.html).
 
-## Usage
-
-<!--
-Add usage examples, CLI commands, or screenshots here. Link to wiki or external docs for advanced scenarios.
--->
-
-## Support
-
-<!--
-For help, file an issue or reach out via the project's communication channels.
--->
-
-## Community
-
-<!--
-Refer to the code of conduct and community guidelines. Optionally, add contributor lists or community resources.
--->
 
 This project follows the [CODE_OF_CONDUCT](./CODE_OF_CONDUCT.md). Report unacceptable behavior to a project [CODEOWNER](./CODEOWNERS).
-
-## Acknowledgments
-
-<!--
-List collaborators, inspirations, or upstream projects here.
--->
 
 ## Contributing
 
