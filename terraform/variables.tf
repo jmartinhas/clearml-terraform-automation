@@ -26,6 +26,29 @@ variable "resource_prefix" {
   default     = "clearml"
 }
 
+variable "vpc_cidr" {
+  description = "The VPC CIDR to deploy the ClearML server in."
+  type        = string
+  default     = "10.0.0.0/16" # Replace with your actual VPC ID
+}
+
+variable "az_zones" {
+  description = "List of availability zones to use for the ClearML server."
+  type        = list(string)
+  default     = ["eu-west-1a", "eu-west-1b"]
+}
+
+variable "private_subnets" {
+  description = "List of private subnets for the ClearML server."
+  type        = list(string)
+  default     = ["10.0.1.0/24", "10.0.2.0/24"] 
+}
+variable "public_subnets" {
+  description = "List of public subnets for the ClearML server."
+  type        = list(string)
+  default     = ["10.0.101.0/24", "10.0.102.0/24"]
+}
+
 variable "ssh_port22" {
   description = "Security ingress rule: Enable SSH open port 22."
   type        = bool

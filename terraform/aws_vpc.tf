@@ -16,11 +16,11 @@ module "vpc" {
   version = "5.21.0"
 
   name = "ClearML VPC"
-  cidr = "10.0.0.0/16"
+  cidr = var.vpc_cidr
 
-  azs             = ["eu-west-1a"]
-  private_subnets = ["10.0.1.0/24"]
-  public_subnets  = ["10.0.101.0/24"]
+  azs             = var.az_zones
+  private_subnets = var.private_subnets# <= Use private subnets for the ClearML server
+  public_subnets  = var.public_subnets
 
   enable_nat_gateway     = true
   single_nat_gateway     = true

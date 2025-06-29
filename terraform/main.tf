@@ -15,7 +15,7 @@
 ###############################################################
 
 resource "aws_instance" "clearmlserver" {
-  ami                       = var.region_map[aws_region] 
+  ami                       = var.region_map[var.aws_region] 
   instance_type             = var.instance_type
   key_name                  = var.ssh_port22 ? data.aws_key_pair.private_key[0].key_name : null 
   vpc_security_group_ids    = [aws_security_group.clearml_server_sg.id]

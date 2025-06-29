@@ -18,6 +18,10 @@
 aws_region      = "<aws_region>" # e.g. us-east-1, eu-west-1, etc.
 tfstate_bucket  = "<tfstate_bucket_name>" # bucket for storing tfstate files
 
+az_zones = [ "eu-west-1a", "eu-west-1b" ] # availability zones for the ClearML server
+private_subnets = ["10.0.1.0/24","10.0.2.0/24"]# use private subnets for the ClearML server
+public_subnets = ["10.0.101.0/24", "10.0.102.0/24"]
+
 # enable ssh
 ssh_port22      = false  # by default use SSM session manager
 key_name        = "<priv_key_name>"
