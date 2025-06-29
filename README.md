@@ -6,7 +6,7 @@ Deploy a production-ready ClearML server on AWS using Terraform. This repository
 
 ## Getting Started
 
-If you are familiar with AWS and Terraform, check out the [Quickstart Guide](./terraform/QUICKSTART.MD) to get up and running quickly.
+If you are familiar with AWS and Terraform, check out the [Quickstart Guide](./docs/QUICKSTART.MD) to get up and running quickly.
 
 ## Project Overview
 
@@ -77,7 +77,7 @@ For more details, see the [ClearML Server Configuration Docs](https://clear.ml/d
 
 ### Terraform
 
-Follow the [Quickstart Guide](./terraform/QUICKSTART.MD) for step-by-step deployment instructions.
+Follow the [Quickstart Guide](./docs/QUICKSTART.MD) for step-by-step deployment instructions.
 
 For more on Terraform usage, see the [Terraform Documentation](https://www.terraform.io/docs/index.html).
 
