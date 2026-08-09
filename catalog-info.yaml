@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: clearml-terraform-automation
+  description: This installs clearml on AWS
+  # Example for optional annotations
+  annotations:
+    github.com/project-slug: linuxconsulting2/clearml-terraform-automation
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental
